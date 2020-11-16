@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <title>WebGL sandbox</title>
+        <style>
+            .controllers {
+                padding: 10px;
+            }
+            .controller {
+                border: none;
+                color:whitesmoke;
+                background-color: rgb(255, 0, 81.6);
+                display: inline-block;
+                height: 80px;
+                width: 80px;
+                margin: 5px
+            }
+
+            .controller:active, .controller:hover {
+                background-color: rgb(102, 0, 0);
+                color: rgb(255, 0, 81.6);
+                cursor: pointer
+            }
+
+            .controller#clear, .controller#clear:hover {
+                background-color: seagreen;
+                color:whitesmoke
+            }
+
+            #canvas {
+                cursor: cell;
+            }
+        </style>
+    </head>
+    <body>
+        <canvas id="canvas" height="1000" width="1000"></canvas>
+        <div class="controllers">
+            <button class="controller" id="point" onclick="draw('point')">POINT</button>
+            <button class="controller" id="hline" onclick="draw('hline')">HLINE</button>
+            <button class="controller" id="vline" onclick="draw('vline')">VLINE</button>
+            <button class="controller" id="triangle" onclick="draw('triangle')">TRIANGLE</button>
+            <button class="controller" id="square" onclick="draw('square')">SQUARE</button>
+            <button class="controller" id="clear" onclick="clearCanvas()">CLEAR</button>
+        </div>
+        <script src="webgl.js"></script>
+    </body>
+</html>
